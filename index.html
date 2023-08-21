@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form onsubmit="eventhandel(event)">
+
+        <label  for="fistname">FirstName:</label>
+        <input onkeyup="validations('firstname')" type="text" name="fistname" id="firstname" required>
+
+        <label for="lastname">lastName:</label>
+        <input onkeyup="validations('lastname')" type="text" name="lastname" id="lastname" required>
+
+        <label for="age">age:</label>
+        <input type="number" onkeyup="validations('age')" name="age" id="age" required>
+
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email" required>
+ 
+        <label for="phone">Phone:</label>
+        <input onkeyup="validations('phone')" type="tel" name="phone" id="phone" required>
+
+
+        <p>gender:</p>
+        <div>
+            <label for="male"> Male:</label>
+            <input type="radio" name="gender" id="male">
+        </div>
+
+        <div>
+            <label for="female"> Female:</label>
+            <input type="radio" name="gender" id="female">
+        </div>
+
+
+        <p id="error_msg"></p>
+        <button type="submit" id="submit_1">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
