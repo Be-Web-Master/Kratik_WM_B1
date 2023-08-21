@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form onsubmit="handelEvent(event)">
+        <label for="name">First Name:</label>
+        <input  type="text" name="firstname" id="firstname" required>
+
+        <label for="name">Last Name:</label>
+        <input type="text" name="lastname" id="lastname"   required>
+
+        <label for="age">age:</label>
+        <input onkeyup="validateinput('age')" type="number" name="age" id="age" required>
+
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="name">phone:</label>
+        <input onkeyup="validateinput('phone')" type="tel" name="phone" id="phone" required>
+
+
+        <p>Gender</p>
+        <div>
+            <label for="male">Male:</label>
+            <input type="radio" id="male" name="gender">
+        </div>
+        <div>
+            <label for="female">female:</label>
+            <input type="radio" id="female" name="gender">
+        </div>
+        <p class="error_msg"></p>
+
+        <button type="submit"> Submit</button>
+
+
+
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
