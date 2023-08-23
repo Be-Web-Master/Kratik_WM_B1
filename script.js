@@ -1,383 +1,409 @@
+// 1. Use **`getElementById`** to target the element with the ID "main-heading" and print it to
+// the console. (**`getElementById`**)
 
-// // // Use getElementById to target the element with the ID "main-heading" and print it to the console. (getElementById)
+// let get_id= document.getElementById("main-heading");
+// console.log(get_id);
 
-// // const main_heading = document.getElementById("main-heading")
 
-// // console.log(main_heading);
 
+// 2. Utilize **`elem.type`** to target the input element with the ID "name" and 
+//print its type to the console. (**`elem.type`**)
 
-// // // Utilize elem.type to target the input element with the ID "name" and print its type to the console. (elem.type)
+// let get_id= document.getElementById("name").type;
+// console.log(get_id);
 
+// 3. Make use of **`elem.name`** to target the input element with the ID "name" and 
+// print its name attribute to the console. (**`elem.name`**)
 
-// // const text_name = document.getElementById("name");
-// // console.log(text_name.type);
+// let get_id= document.getElementById("name").name;
+// console.log(get_id);    
 
-// //  //Make use of elem.name to target the input element with the ID "name" and print its name attribute to the 
-// //  // console. (elem.name)
 
-// // let elm_name= document.getElementById("name");
+// 4. Using **`elem.id`**, target the input element with the ID "name" and print its ID attribute to the console. (**`elem.id`**)
 
-// // console.log(elm_name.name);
 
+// let get_id= document.getElementById("name").id;
+// console.log(get_id);   
 
-// // //Using elem.id, target the input element with the ID "name" and print its ID attribute to the console. (elem.id)
+// 5. With the help of **`elem.value`**, target the input element with the ID "name" and print its value to the console. (**`elem.value`**)
 
-// // let elm_id= document.getElementById("name");
+// let get_id= document.getElementById("name").value;
+// console.log(get_id);
 
-// // console.log(elm_name.id);
+// 6. Using **`querySelectorAll`**, target all **`<li>`** elements within the **`<ul>`** with class "list" and print them to the console.
+// (**`querySelectorAll`**)
 
-// // // With the help of elem.value, target the input element with the ID "name" and print its value to the console. (elem.value)
-// // let elm_value= document.getElementById("name");
+// let querySelector= document.querySelectorAll(".list")[0];
+// let elem= querySelector.innerHTML
+// console.log(elem);   
 
-// // console.log(elm_value.value)
+// 7. Leveraging **`querySelector`**, target the **`<p>`** element within the **`<div>`** with class "content" and 
+//print it to the console. (**`querySelector`**)
 
-// // // Using querySelectorAll, target all <li> elements within the <ul> with class "list" and print them to the console. (querySelectorAll)
+// let querySelector= document.querySelector('.content').children[0];
+// // let elem= querySelector.children[0]
+// console.log(querySelector);
 
-// // let query_selector_all= document.querySelectorAll(".list")[0].innerHTML;
 
-// // console.log(query_selector_all);
 
-// // // Leveraging querySelector, target the <p> element within the <div> with class "content" and print it to the console. (querySelector)
+// 8. Utilizing **`document.body.children`**, target all child elements of the **`<body>`** element and 
+// print them to the console. (**`document.body.children`**)
 
-// // let query_selector= document.querySelector("#container").children[0];
+// let allChildrens = document.body.children;
+// console.log(allChildrens);
 
-// // console.log(query_selector);
 
-// // // Utilizing document.body.children, target all child elements of the <body> element and print them to the console. 
-// // // (document.body.children)
+// 9. Using **`getElementsByTagName`**, target the first **`<li>`** element within the **`<ul>`** with class "list" and 
+// print it to the console. (**`getElementsByTagName`**)
 
-// // let body_elem= document.body.children;
+// let nameTag= document.getElementsByTagName('li')[0];
 
-// // console.log(body_elem);
+// console.log(nameTag);
 
+// 10. Make use of **`getElementsByClassName`**, target all elements with the class "content" and 
+// print them to the console. (**`getElementsByClassName`**)
 
-// // // Using getElementsByTagName, target the first <li> element within the <ul> with class "list" and print it to the 
-// // // console. (getElementsByTagName)
+// let className= document.getElementsByClassName("content")[0].innerHTML
+// console.log(className);
 
-// // let tag_name= document.getElementsByTagName("li")[0];
+// 11. Using **`getElementsByName`**, target the input element with the name "fullName" and print it to the console.
+// (**`getElementsByName`**)
 
-// // // console.log(tag_name);
+// let elementName= document.getElementsByName('fullname');
 
+// console.log(elementName);
 
-// // Make use of getElementsByClassName, target all elements with the class "content" and print them to the
-// // console. (getElementsByClassName)
+// 12. What classes are present in the **`classList`** of the element with the ID "main-heading"? (**`classList`**)
 
-// let class_name= document.getElementsByClassName("content")[0];
-// // console.log(class_name);
+// let classList1= document.getElementById('main-heading').classList;
+// console.log(classList1);
 
+// 13. Add the class "highlight" to the element with the ID "main-heading". What classes are present now? (**`classList.add`**)
 
-// // Using getElementsByName, target the input element with the name "fullName" and print it to the 
-// // console. (getElementsByName)
+// let addClass= document.getElementById('main-heading').classList.add("highlight");
+// console.log(addClass);
 
-// let by_name= document.getElementsByName("fullName");
-// // console.log(by_name);
+// let classList1= document.getElementById('main-heading').classList;
+// console.log(classList1);
 
 
-// // What classes are present in the classList of the element with the ID "main-heading"? (classList)
+// 14. Remove the class "highlight" from the element with the ID "main-heading". What classes are present now? (**`classList.remove`**)
 
-// let class_list = document.getElementById('main-heading').classList;
+// let remove_Class= document.getElementById('main-heading').classList.remove('highlight');
 
-// // console.log(class_list);
+// let classList1= document.getElementById('main-heading').classList;
+// console.log(classList1);
 
-// // Add the class "highlight" to the element with the ID "main-heading".
-// // What classes are present now? (classList.add)
+// 15. Toggle the class "active" on the element with the class "inner-box" inside the element with the ID "container". 
+// What classes are present on the "inner-box" element? (**`classList.toggle`**)
 
-// let class_list_add = document.getElementById('main-heading')
-// class_list_add.classList.add("highlight");
+// let togl= document.getElementsByClassName('inner-box')[0]
+// let togl1=togl.classList.toggle('active');
 
-// // console.log(class_list_add);
+// console.log(togl.classList)
 
+// 16. Does the element with the ID "name" have the class "input-field"? Print **`true`** or **`false`**. 
+// (**`classList.contains`**)
 
-// // console.log(document.getElementById("main-heading").classList);
+// let contain= document.getElementById('name').classList.contains('input-field');
 
-// // 14. Remove the class "highlight" from the element with the ID "main-heading"
-// // What classes are present now? (**`classList.remove`**)
+// console.log(contain);
 
-// let class_remove = document.getElementById('main-heading');
-// class_remove.classList.remove("highlight");
 
+// 17. What is the background color of the element with the ID "main-heading"? (**`style.background-color`**)
 
-// // console.log(document.getElementById("main-heading").classList);
+// let checkBgColor= document.getElementById('main-heading').style.backgroundColor;
 
+// console.log(checkBgColor);
 
-// // Toggle the class "active" on the element with the class "inner-box" inside the element with the ID "container". 
-// // What classes are present on the "inner-box" element? (classList.toggle)
+// 18. Does the element with the class "list" contain an **`<li>`** element with the id "item2"? 
+//Print **`true`** or **`false`**. (**`matches`**)
 
-// let Tgl= document.getElementById("container").classList.toggle("active");
+//skip for now
 
-// // console.log(Tgl);
+// 19. Does the element with the class "content" match a **`<div>`** tag? Print **`true`** or **`false`**. (**`matches`**)
 
-// // console.log(document.getElementById("container").classList);
+// let mat= document.getElementsByClassName('content')[0].matches('div');
 
+// console.log(mat);
 
-// // Does the element with the ID "name" have the class "input-field"? Print true or false. (classList.contains)
+// 20. What is the nearest ancestor of the element with the class "inner-box" that has the ID "container"? (**`closest`**)
 
-// let id_name= document.getElementById("name").classList.contains("input-field");
+// let ancestor1= document.getElementsByClassName('inner-box')[0].closest('#container');
 
-// // console.log(id_name);
+// console.log(ancestor1);
 
 
-// // What is the background color of the element with the ID "main-heading"? (style.background-color)
+// 21. Print the first child element of the **`<body>`** element. (**`document.body`**)
+// let firstChild1= document.body.firstChild
+// console.log(firstChild1);
 
+// 22. Print the number of child elements within the **`<body>`** element. (**`document.body.children`**)
 
-// // console.log(document.getElementById("main-heading").style.backgroundColor);
+// let firstChild1= document.body.children
+// console.log(firstChild1);
 
-// // 18. Does the element with the class "list" contain an **`<li>`** element with the text "Item 2"? 
-// // Print **`true`** or **`false`**. (**`matches`**)
+// 23. What is the tag name of the first child element of the **`<body>`** element? (**`document.body.firstChild.tagName`**)
 
-// //skip
+// let firstChildTag =document.body.firstChild.tagName;
+// console.log(document.body.firstChild.tagName);
 
-// // Does the element with the class "content" match a <div> tag? Print true or false. (matches)
+// 24. What is the class name of the first child element of the **`<body>`** element? (**`document.body.firstChild.className`**)
+// console.log(document.body.firstChild.className);
 
+// 25. Print the **`innerHTML`** of the element with the class "content". (**`innerHTML`**)
 
-// // console.log((document.getElementsByClassName("content")[0]).matches('div'));
+// let innhtml= document.getElementsByClassName("content")[0].innerHTML;
 
-// // let contains= documen
+// console.log(innhtml);
 
+// 26. Print the **`innerText`** of the element with the class "content". (**`innerText`**)
 
+// let innhtml= document.getElementsByClassName("content")[0].innerText;
+// console.log(innhtml);
 
-// // What is the nearest ancestor of the element with the class "inner-box" that has the ID "container"? (closest)
+// 27. Get the value of the "type" attribute of the input element with the ID "name". (**`getAttribute()`**)
+// let type= document.getElementById('name').getAttribute('type');
 
-// // console.log((document.getElementsByClassName('inner-box')[0]).closest('#container'));
+// console.log(type);
 
-// // Print the first child element of the <body> element. (document.body)
+// 28. Set the "placeholder" attribute of the input element with the ID "name" to "Enter your full name". (**`setAttribute()`**)
+// let placeholder= document.getElementById('name').setAttribute('placeholder', "fullname");
+// console.log(placeholder);
 
+// 29. Does the input element with the ID "name" have the "placeholder" attribute? Print **`true`** or **`false`**. (**`hasAttribute()`**)
 
+// let checkPlaceholder= document.getElementById('name').hasAttribute('placeholder');
+// console.log(checkPlaceholder);
 
-// // console.log(document.body.firstElementChild);
+// 30. Remove the "value" attribute from the input element with the ID "name". (**`removeAttribute()`**)
 
-// // Print the number of child elements within the <body> element. (document.body.children)
+// let removeValue= document.getElementById('name').removeAttribute('value');
+// console.log(removeValue);
 
-// // console.log(document.body.childeren);
+// 31. Print the total number of attributes present in the element with the ID "main-heading". (**`attributes()`**)
 
-// // What is the tag name of the first child element of the <body> element? (document.body.firstChild.tagName)
+// let att= document.getElementById('main-heading').attributes;
+// console.log(att);
 
-// let tag_name= document.body.firstElementChild.tagName;
+// 32. Create a new **`<div>`** element using the **`document.createElement`** method. Print the created element. 
+// (**`document.createElement`**)
 
-// // console.log(tag_name);
+// let create_div = document.createElement('div');
+// console.log(create_div);
 
-// //25. Print the **`innerHTML`** of the element with the class "content". (**`innerHTML`**)
+// 33. Create a new text node with the content "This is a new text node." using the **`document.createTextNode`** method. 
+// Print the created text node. (**`document.createTextNode`**)
 
-// let innHTML= document.getElementsByClassName("content")[0].innerHTML;
 
-// // console.log(innHTML);
+// let create_node= document.createTextNode(' "This is a new text node." ')
 
-// //26. Print the **`innerText`** of the element with the class "content". (**`innerText`**)
+// console.log(create_node);
 
-// let innText= document.getElementsByClassName('content')[0].innerText;
+// 34. Append the created text node to the element with the ID "main-heading". 
+// Print the updated element. (**`append`**)
 
-// // console.log(innText);
+// let append1= (document.getElementById("main-heading")).append(create_node);
 
-// //27. Get the value of the "type" attribute of the input element with the ID "name". (**`getAttribute()`**)
 
-// let get_elem= document.getElementById("name").getAttribute('type');
+// 35. Prepend the created **`<div>`** element to the element with the class "content". 
+// Print the updated element. (**`prepend`**)
 
-// // console.log(get_elem);
+// let addelement= create_div.textContent = "i am the creted div";
 
-// //28. Set the "placeholder" attribute of the input element with the ID "name" to "Enter your full name". (**`setAttribute()`**)
+// let pre= document.getElementsByClassName('content')[0].prepend(create_div);
 
-// let place_holder = document.getElementById('name').setAttribute('placeholder',"Enter your full name");
 
+// 36. Replace the element with the ID "main-heading" with the created text node.
+// Print the updated element. (**`replaceWith`**)
 
+// let Text1 = document.getElementById("main-heading");
+// let replaceWith = Text1.replaceWith(create_node);
 
-// //29. Does the input element with the ID "name" have the "placeholder" attribute? Print **`true`** or **`false`**. (**`hasAttribute()`**)
+// 37. Insert the created **`<div>`** element before the element with the class "inner-box". 
+// Print the updated parent element. (**`before`**)
 
-// let check_ph = document.getElementById('name').hasAttribute('placeholder');
+// let addelement= create_div.textContent = "'i am the creted div'";
 
-// // console.log(check_ph);
+// let insert_div= document.getElementsByClassName("inner-box")[0].before(create_div)
 
-// //30. Remove the "value" attribute from the input element with the ID "name". (**`removeAttribute()`**)
 
-// let remove_value= document.getElementById('name').removeAttribute("value");
+// 38. Insert the created **`<div>`** element after the element with the class "inner-box".
+// Print the updated parent element. (**`after`**)
 
+// let create_div = document.createElement('div');
+// let addelement= create_div.textContent = "'i am the creted div'";
 
-// // 31. Print the total number of attributes present in the element with the ID "main-heading". (**`attributes()`**)
+// let afterClassInsert= document.getElementsByClassName("inner-box")[0].after(create_div);;
 
-// let checkElm= document.getElementById('main-heading').attributes;
 
-// // console.log(checkElm);
-
-
-// // 32. Create a new **`<div>`** element using the **`document.createElement`** method. Print the created element. 
-// // (**`document.createElement`**)
-
-
-// let creatediv= document.createElement('div');
-// console.log(creatediv);
-// // document.body.append(creatediv)
-
-
-// // 33. Create a new text node with the content "This is a new text node.
-// // " using the **`document.createTextNode`** method. Print the created text node. (**`document.createTextNode`**)
-
-//  let text_node= document.createTextNode("this is a new text");
-//  creatediv.append(text_node)
-
-// // console.log(text_node, creatediv);
-
-// // 34. Append the created text node to the element with the ID "main-heading". Print the updated element. (**`append`**)
-
-// // let append_node= document.getElementById("main-heading")
-// // // console.log(append_node)
-// // let apend_2=append_node.append(text_node);
-// // // console.log(append_node);
-
-// // 35. Prepend the created **`<div>`** element to the element with the class "content". Print the updated element. (**`prepend`**)
-
-
-
-// // 36. Replace the element with the ID "main-heading" with the created text node. Print the updated element. (**`replaceWith`**)
-
-// // let rep_elem= document.getElementById("main_heading");
-
-// // let elem1= rep_elem.replaceWith(text_node);
-
-// // console.log(elem1);
-
-
-// // 37. Insert the created **`<div>`** element before the element with the class "inner-box". 
-// // Print the updated parent element. (**`before`**)
-
-// // const before1= document.getElementsByClassName("inner_box")[0];
-// // const insert1= before1.before(creatediv, "hello..." );
-
-// // console.log(insert1);
-
-
-
-// // 38. Insert the created **`<div>`** element after the element with the class "inner-box". Print the updated parent element. (**`after`**)
-
-
-// // 39. Print the **`offsetHeight`** and **`offsetWidth`** of the element with the class "content". 
+// 39. Print the **`offsetHeight`** and **`offsetWidth`** of the element with the class "content". 
 //(**`offsetHeight`** / **`offsetWidth`**)
 
-// let hei_width= document.getElementsByClassName('content')[0];
 
-// let result_h= hei_width.offsetHeight;
-// let result_w= hei_width.offsetWidth;
-
-// console.log(result_h);
-// console.log(result_w);
+// let content1= document.getElementsByClassName('content')[0];
+// console.log(content1.offsetHeight);
+// console.log(content1.offsetWidth);
 
 
+// 40. Print the **`clientHeight`** and **`clientWidth`** of the element with the class "content". 
+//(**`clientHeight`** / **`clientWidth`**)
+
+// let content1= document.getElementsByClassName('content')[0];
+// console.log(content1.clientHeight);
+// console.log(content1.clientWidth);
+
+// 41. Print the **`scrollHeight`** and **`scrollWidth`** of the element with the class "content".
+// (**`scrollHeight`** / **`scrollWidth`**)
 
 
-// // 40. Print the **`clientHeight`** and **`clientWidth`** of the element with the class "content". 
-// //(**`clientHeight`** / **`clientWidth`**)
+// let content1= document.getElementsByClassName('content')[0];
+// console.log(content1.scrollHeight);
+// console.log(content1.scrollWidth);
+
+// 42. Print the **`innerHeight`** and **`innerWidth`** of the window.
+// (**`innerHeight`** / **`innerWidth`**)
 
 
+// let content1= window
+// console.log(content1.innerHeight);
+// console.log(content1.innerWidth);
 
-// let hei_width= document.getElementsByClassName('content')[0];
+// 43. Print the **`outerHeight`** and **`outerWidth`** of the window.
+ //(**`outerHeight`** / **`outerWidth`**)
 
-// let result_h= hei_width.clientHeight;
-// let result_w= hei_width.clientWidth;
-
-// console.log(result_h);
-// console.log(result_w);
-
-
-// // 41. Print the **`scrollHeight`** and **`scrollWidth`** of the element with the class "content". 
-// //(**`scrollHeight`** / **`scrollWidth`**)
-
-// let hei_width= document.getElementsByClassName('content')[0];
-
-// let result_h= hei_width.scrollHeight;
-// let result_w= hei_width.scrollWidth;
-
-// console.log(result_h);
-// console.log(result_w);
+//  let content1= window
+// console.log(content1.outerHeight);
+// console.log(content1.outerWidth);
 
 
-// // 42. Print the **`innerHeight`** and **`innerWidth`** of the window. (**`innerHeight`** / **`innerWidth`**)
+// 44. Change the text content of the **`<h1>`** element with the ID "main-heading" to "Hello, DOM!".
 
-// let hei_width= document.getElementsByClassName('content')[0];
-
-// let result_h= window.innerHeight;
-// let result_w= window.innerWidth;
-
-// console.log(result_h);
-// console.log(result_w);
+// let changeHadline= document.getElementById('main-heading').innerHTML = 'Hello, Dom!';
 
 
-// // 43. Print the **`outerHeight`** and **`outerWidth`** of the window. (**`outerHeight`** / **`outerWidth`**)
+// 45. Change the value of the input element with the ID "name" to "Jane Smith".
 
-// let result_h= window.outerHeight;
-// let result_w= window.outerWidth;
-
-// console.log(result_h);
-// console.log(result_w);
+// let changeValue = document.getElementById('name').setAttribute('value', 'Jane Smith')
 
 
+// 46. Add a new **`<li>`** element to the **`<ul>`** element with class "list" containing the text "Item 4".
 
-// // 44. Change the text content of the **`<h1>`** element with the ID "main-heading" to "Hello, DOM!".
-
-
-// let change1= document.getElementById('main-heading')
-// let text_change= change1.innerHTML= "hello, dom"
-
-// console.log(text_change);
+// let targerElement= document.getElementsByClassName('list')[0];
+// let createElem= document.createElement('li')
+// let appendLi= targerElement.append(createElem);  
+// let addText= document.querySelector('.list').children[3].innerText= 'Item 4'
 
 
-// // 45. Change the value of the input element with the ID "name" to "Jane Smith".
+// 47. Change the text content of the **`<p>`** element within the **`<div>`** 
+//with class "content" to "Updated paragraph text".
+
+
+// let updatedText= document.querySelector('.content').children[0];
+// let change= updatedText.innerText= "Update paragraph text";
 
 
 
-// // 46. Add a new **`<li>`** element to the **`<ul>`** element with class "list" containing the text "Item 4".
-// // 47. Change the text content of the **`<p>`** element within the **`<div>`** with class "content" to "Updated paragraph text".
-// // 48. Change the background color of the **`<div>`** element with ID "container" to blue.
-// // 49. Remove the class "inner-box" from the **`<div>`** element with class "inner-box".
-// // 50. Clone the **`<div>`** element with ID "container" and append it to the body.
-// // 51. Wrap the contents of the **`<div>`** with ID "container" in a new **`<div>`** with class "wrapper".
-// // 52. Remove the first **`<li>`** element from the **`<ul>`** with class "list".
-// // 53. Add the class "highlight" to the **`<p>`** element within the **`<div>`** with class "content".
-// // 54. Change the type of the input element with ID "name" to "email".
-// // 55. Replace the text content of the **`<li>`** element with "Item 2" to "Updated Item 2".
-// // 56. Change the value of the input element with ID "name" to an empty string.
-// // 57. Remove the entire **`<form>`** element from the DOM.
-// // 58. Add an event listener to the **`<h1>`** element with ID "main-heading" that logs a message when clicked.
+// 48. Change the background color of the **`<div>`** element with ID "container" to blue.
 
-// function popupmsg(){
-//     aletr("hello!");
+// let changeBG= document.getElementById("container").style.backgroundColor ='blue'
+
+
+// 49. Remove the class "inner-box" from the **`<div>`** element with class "inner-box".
+
+//  let remove_Class = document.getElementsByClassName('inner-box')[0].removeAttribute('class')
+
+
+// 50. Clone the **`<div>`** element with ID "container" and append it to the body.
+
+// let elementExtract =document.getElementById('container');
+// let getClone = elementExtract.cloneNode(true);
+// let bdy = document.body.appendChild(getClone);
+// console.log(bdy);
+
+
+// 51. Wrap the contents of the **`<div>`** with ID "container" in a new **`<div>`** with class "wrapper".
+
+// let createDiv= document.createElement('div');
+// let add_class= createDiv.classList.add("wrapper")
+// let append_div = document.body.appendChild(createDiv);
+// console.log(createDiv);
+// let target_container= document.getElementById('container')
+
+// let target_div= document.getElementsByClassName('wrapper')[0].appendChild(target_container);
+
+
+// 52. Remove the first **`<li>`** element from the **`<ul>`** with class "list".
+
+// let targetList= document.getElementsByClassName('list')[0];
+// let targetElement= document.getElementsByClassName('list')[0].children[0]
+// let deleteElement= targetList.removeChild(targetElement);
+
+// 53. Add the class "highlight" to the **`<p>`** element within the **`<div>`** with class "content".
+
+// let targetElement= document.getElementsByClassName('content')[0].children[0]
+
+// let addClass= targetElement.classList.add("Highlight")
+
+// console.log(targetElement.classList);
+
+// 54. Change the type of the input element with ID "name" to "email".
+
+// let targerElement = document.getElementById('name').setAttribute('type', 'email');
+
+
+// 55. Replace the text content of the **`<li>`** element with "Item 2" to "Updated Item 2".
+
+// let targetElement = document.querySelector('.list').children[1]
+
+// let updateText= targetElement.innerText = "Updated Item 2";
+
+
+// 56. Change the value of the input element with ID "name" to an empty string.
+
+// let changeToEmply= document.getElementById('name').setAttribute('value', '');
+
+
+// 57. Remove the entire **`<form>`** element from the DOM.
+
+// let targetForm= document.body.children[1];
+
+// let removeForm=  document.body.removeChild(targetForm);
+
+
+// 58. Add an event listener to the **`<h1>`** element with ID "main-heading" that logs a message when clicked.
+
+// let targetH1= document.getElementById('main-heading');
+
+// function whenClick(){
+//     console.log('Message when Clicked')
 // }
 
-// let elem= document.getElementById("main-heading").addEventListener('click', popupmsg);
-
-// console.log(elem);
-
-// // 59. Change the font size of the **`<p>`** element within the **`<div>`** with class "content" to 18px.
-
-// let change_element= document.getElementsByClassName('content')[0].getElementsByTagName('p')[0].style.fontSize="18px"
+// targetH1.addEventListener('click',whenClick);
 
 
-// // 60. Remove the **`<ul>`** element with class "list" from the DOM.
+// 59. Change the font size of the **`<p>`** element within the **`<div>`** with class "content" to 18px.
 
-// let rem= document.getElementsByClassName('list')[0].remove()
-
-
+// let changeFont= (document.getElementsByClassName('content')[0].children[0]).style.fontSize ='18px'
 
 
-// // 61. Create a new **`<div>`** element, give it a class of "new-div", and append it to the body.
+// 60. Remove the **`<ul>`** element with class "list" from the DOM.
 
-// let new_div1= document.createElement('div')
+// document.body.removeChild(document.getElementsByClassName('list')[0]);
 
-// new_div1.className='new_div1'
-
-// document.body.append(new_div1, "hiiiii");
+// 61. Create a new **`<div>`** element, give it a class of "new-div", and append it to the body.
 
 
-// // 62. Append a new **`<p>`** element with the text "New paragraph" to the **`<div>`** with class "inner-box".
-
-
-let aad_P= document.getElementsByClassName('inner-box')[0];
-let p_tag= document.createElement('p');
-p_tag.textContent = "New paragraph";
-
-aad_P.appendChild(p_tag);
-
-console.log(p_tag);
+// const createDiv= document.createElement('div');
+// let addClass= createDiv.classList.add('new-div')
+// let addText = createDiv.innerText = "hi I'm that New-Div";
+// document.body.append(createDiv);
 
 
 
+// 62. Append a new **`<p>`** element with the text "New paragraph" to the **`<div>`** with class "inner-box".
 
 
-
+// let createPElement= document.createElement('p')
+// let addtext= createPElement.innerText ="New paragraph"
+// let appendPTag= document.getElementsByClassName('inner-box')[0].append(createPElement);
