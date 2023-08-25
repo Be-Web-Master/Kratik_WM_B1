@@ -62,7 +62,7 @@ const handelAddTaskSubmit = async (event) => {
     
     idInput.value = '';
 
-    // console.log(todoLiData);
+    console.log(todoLiData);
 
 
     
