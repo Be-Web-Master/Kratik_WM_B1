@@ -8,10 +8,11 @@
 <body>
     <div id="container">
         <form onSubmit="handelAddTaskSubmit(event)">
-            <label for=""> search:
-            </label>
-            <input type="text" id="search" onkeyup="handleSearchInput(event)">
+            <!-- <label for=""> search:
+            </label> -->
+            <input type="text" id="search" onkeyup="handleSearchInput(event)" placeholder="Search"> <br> <br>
             <input type="number" name="number" id="idInput">
+            <br> <br>
         <button id="idSubmit">ADD</button>
         </form>
         <ul id="todolist">

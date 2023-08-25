@@ -1,8 +1,11 @@
 const idInput = document.getElementById('idInput');
 const idSubmit = document.getElementById('idSubmit');
 const todolist = document.getElementById('todolist');
+const search =document.getElementById('search')
 
-const todoLiData= [];
+let todoLiData= [];
+
+
 
 const GET_URL = (idInputVal) =>{ return `https://jsonplaceholder.typicode.com/todos/${idInputVal}`};
 
@@ -69,10 +72,33 @@ const handelAddTaskSubmit = async (event) => {
 
 };
 
+const addUi =() =>{
+    clearUi();
+    for( const el of SearchingArr ){
+        addLiElement(el)
+    }
+}
+
 
 
 const handleSearchInput =(event) => {
-    console.log(event.target.value)
+    const value= event.target.value
+    console.log(value);
+    let result = todoLiData.filter((val)=> val.title.includes(value)
+    )
+   
+
+     if(result.length > 0){
+        clearUi();
+        result.map((li)=>{
+            addLiElement(li)
+        })
+     }
+    
+    // addUi();
+    console.log(result)
 }
+
+
 
 
