@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-      <button onclick="addColumn()" id="columnbutton">add columns</button>
-    <table id="mainTable" border>
-      <thead id="tableHead">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-      </thead>
+<body>
+
+  <button id="columnbutton">add columns</button>
+  <table id="mainTable" border>
+    <thead id="tableHead">
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+    <button id="rowbutton">add rows</button>
+
+    <button id="clearButton">Clear All</button>
+  </table>
+  <br>
+  <form id="sortForm">
+    <select name="items" id="dropDown" name="dropDown"></select>
+
+    <input type="radio" value="ascending" id="ascending" name='sort'>
+    <label for="ascending">Ascending</label>
+
+    <input type="radio" value="descending" id="descending" name='sort'>
+    <label for="descending">Descending</label>
+
+    <button id="sortButton">Sort</button>
+
+    <br>
+    <br>
+
+    <form id="searchForm">
+      <select name="items" id="searchdropDown" name="dropDown"></select>
+
+      <input type="search" id="searchBox" name="search" placeholder="Search">
+  
+      <button id="sortButton">Sort</button>
 
 
-      <tbody id="tableBody">
-      </tbody>
+    <script  src="script_new.js"></script>
+  </form>
+</body>
 
-      <button onclick="addrows()" id="rowbutton">add rows</button>
-    </table>
-
-    <script src="script2.js"></script>
-  </body>
 </html>
