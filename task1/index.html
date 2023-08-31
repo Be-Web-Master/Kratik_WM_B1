@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Project_1</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
   </table>
   <br>
   <form id="sortForm">
-    <select name="items" id="dropDown" name="dropDown"></select>
+    <select name="items" id="sortDropDown" name="sortDropDown"></select>
 
     <input type="radio" value="ascending" id="ascending" name='sort'>
     <label for="ascending">Ascending</label>
@@ -30,20 +30,30 @@
     <label for="descending">Descending</label>
 
     <button id="sortButton">Sort</button>
-
-    <br>
-    <br>
-
-    <form id="searchForm">
-      <select name="items" id="searchdropDown" name="dropDown"></select>
-
-      <input type="search" id="searchBox" name="search" placeholder="Search">
-  
-      <button id="sortButton">Sort</button>
-
-
-    <script  src="script_new.js"></script>
   </form>
+
+  <br>
+
+  <form id="searchForm">
+    <select name="items" id="searchDropDown" name="searchDropDown"></select>
+
+    <input type="search" id="searchBar" name="search" placeholder="Search">
+
+    <button id="searchButton">Search</button>
+  </form>
+<!-- 
+   <table id="searchTable" border>
+    <thead id="searchTableHead">
+    </thead>
+    <tbody id="searchTableBody">
+    </tbody>
+    </table> -->
+
+    
+
+  <!-- //--------------------------------- -->
+  <script src="script_new.js"></script>
+
 </body>
 
 </html>

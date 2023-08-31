@@ -7,8 +7,12 @@ const clearButton = document.getElementById("clearButton");
 // const sortButton = document.getElementById('sortButton');
 const ascending = document.getElementById("ascending");
 const descending = document.getElementById("descending");
-const dropDown = document.getElementById("dropDown");
+const sortDropDown = document.getElementById("sortDropDown");
 const sortForm = document.getElementById("sortForm");
+const searchForm = document.getElementById("searchForm");
+const searchDropDown = document.getElementById("searchDropDown");
+const searchBar = document.getElementById("searchBar");
+// const searchButton = document.getElementById("searchButton");
 
 const key = "tableState";
 const tableState = JSON.parse(localStorage.getItem(key)) ?? {
@@ -150,31 +154,31 @@ tableHead.addEventListener("keyup", (event) => {
 
 // ------------------------saturday-end-monday-start--------------------------
 
-function headerValues() {
+const sortDropDownValues = () => {
   for (let i = 0; i < tableState.header.length; i++) {
     const columnValue = tableState.header[i].cellValue;
     // console.log(columnValue);
     const optionTag = document.createElement("option");
     optionTag.innerText = columnValue;
-    dropDown.append(optionTag);
+    sortDropDown.append(optionTag);
 
     // return columnValue;
   }
-}
-headerValues();
+};
+sortDropDownValues();
 
 sortForm.addEventListener("submit", (event) => {
-//   event.preventDefault();
+    // event.preventDefault();
 
-  const selectedcolumnName = event.target.dropDown.value;
+  const selectedcolumnName = event.target.sortDropDown.value;
   const selectingOrder = event.target.sort.value;
   const sortColumnNumber = tableState.header.find(
     (headerObj) => headerObj.cellValue === selectedcolumnName
   ).columnNumber;
 
-  console.log(selectedcolumnName);
-  console.log(selectingOrder);
-  console.log(sortColumnNumber);
+//   console.log(selectedcolumnName);
+//   console.log(selectingOrder);
+//   console.log(sortColumnNumber);
 
   if (selectingOrder == "ascending") {
     tableState.body.sort((Obj1, Obj2) => {
@@ -199,8 +203,54 @@ sortForm.addEventListener("submit", (event) => {
   localStorage.setItem(key, JSON.stringify(tableState));
 });
 
+//---------------------------------Search-----------------
+
+const searchDropDownValue = () => {
+  for (let i = 0; i < tableState.header.length; i++) {
+    const columnValue = tableState.header[i].cellValue;
+    // console.log(columnValue);
+    const optionTag = document.createElement("option");
+    optionTag.innerText = columnValue;
+    searchDropDown.append(optionTag);
+  }
+};
+searchDropDownValue();
+
+searchForm.addEventListener('submit',(event) => {
+    event.preventDefault();
+
+    const searchValue = event.target.searchBar.value;
+    const dropDownValue = event.target.searchDropDown.value;
+    const headerIndex = tableState.header.find((headerObj)=> headerObj.cellValue === dropDownValue).columnNumber;
+    console.log(headerIndex);   
+
+    console.log(tableState.body.columnIndex);
+    // console.log(dropDownValue);  
+    // console.log(searchValue);
+
+    // for(let i =0; i< tableState.header.length;i++){
+    //     const searchVal = tableState.body[i].columnNumber;
+    //     console.log(searchVal);
+
+    // }
+
+    // if ( headerIndex)
+
+
+    });
+
+
+    // for(let i =0; i< tableState.header.length; i++){
+    //     const searchColumn= tableState.header[i].columnNumber;
+        
+
+    // }
+
+
+
+// ---------------------------------extra-------------------------
 // const sortOrder = event.target.sort.value
-// const columnName = event.target.dropDown.value
+// const columnName = event.target.sortDropDown.value
 // const columnNumber = tableState.header.find(headerObj => headerObj.columnName === columnName).columnNumber
 // if (sortOrder == "ascending") {
 //     tableState.body.sort((obj1, obj2) => {
