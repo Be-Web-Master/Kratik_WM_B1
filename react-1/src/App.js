@@ -2,7 +2,7 @@
 // import './App.css';
 // import { InputForm } from './InputForm';
 // import { DataList, dataArray } from './DataList';
-import {UseEffectComp} from './useEffect';
+// import {UseEffectComp} from './useEffect';
 
 // function App() {
 //   return (
@@ -15,7 +15,7 @@ import {UseEffectComp} from './useEffect';
 // export default App;
 // import { useState } from "react";
 
-export default function ReactComp() {
+// export default function ReactComp() {
 
   
   // const [count, setCount] = useState(0);
@@ -26,10 +26,10 @@ export default function ReactComp() {
   //   setCount(count + 1);
   // };
 
-  return (
-    <UseEffectComp/>
-  );
-};
+//   return (
+//     <UseEffectComp/>
+//   );
+// };
   //   <div className="App">
   //     <button onClick={increaseCount}>+</button>
   //     <span>Count: {count}</span>
@@ -52,3 +52,37 @@ export default function ReactComp() {
 //   const {compCount} = props;
 //   return <div> From Comp1: {compCount}</div>
 // }
+
+
+// ------------------------------------------
+// import "./styles.css";
+// import {UseRefDemo} from './useRefDemo';
+
+// import {UseContextDemo} from './useContextDemo';
+
+// export default function App() {
+//   return (
+//     <div className="App">
+     
+//       <UseContextDemo/>
+
+//     </div>
+//   );
+// }
+
+
+
+////////////////////////////////////////
+
+
+import {UseReducerDemo} from './useReducerDemo';
+
+export default function App() {
+  return (
+    <div className="App">
+     
+      <UseReducerDemo/>
+
+    </div>
+  );
+}
