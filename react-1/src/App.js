@@ -75,13 +75,16 @@
 ////////////////////////////////////////
 
 
-import {UseReducerDemo} from './useReducerDemo';
+// import {UseReducerDemo} from './useReducerDemo';
+import {ReduxDemo} from './Redux/reduxDemo';
 
 export default function App() {
   return (
     <div className="App">
      
-      <UseReducerDemo/>
+      {/* <UseReducerDemo/> */}
+      <ReduxDemo/>
+
 
     </div>
   );
