@@ -1,15 +1,20 @@
+// "2. Find if the given number exists in an array - ( do not use built-in function ) 
+// [11,34,22,21,5,22] -> 
+// find 21 if exists return true otherwise false
 
-// "3. Reverse an array. [1,2,3,4,5,6] -> [6,5,4,3,2,1] (do not use built-in method)
 
+const arr = [11, 34, 22, 20, 5, 22];
 
-let arr = [1,2,3,4,5,6];
-
-let result=[];
-
-for(let i= arr.length-1; i>=0; i--){
-    result.push(arr[i]);
+let result = false
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 21) {
+        let a = arr[i];
+        if (a === 21) {
+            result = true;
+        }
+    }
+   
 }
 console.log(result);
-
 
 
