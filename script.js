@@ -5,7 +5,6 @@
 // console.log(get_id);
 
 
-
 // 2. Utilize **`elem.type`** to target the input element with the ID "name" and 
 //print its type to the console. (**`elem.type`**)
 
@@ -17,7 +16,6 @@
 
 // let get_id= document.getElementById("name").name;
 // console.log(get_id);    
-
 
 // 4. Using **`elem.id`**, target the input element with the ID "name" and print its ID attribute to the console. (**`elem.id`**)
 
@@ -35,7 +33,9 @@
 
 // let querySelector= document.querySelectorAll(".list")[0];
 // let elem= querySelector.innerHTML
-// console.log(elem);   
+// console.log(elem);  
+
+
 
 // 7. Leveraging **`querySelector`**, target the **`<p>`** element within the **`<div>`** with class "content" and 
 //print it to the console. (**`querySelector`**)
@@ -44,13 +44,18 @@
 // // let elem= querySelector.children[0]
 // console.log(querySelector);
 
+// let querySelector1 = document.querySelector(".content").children[0];
 
+// console.log(querySelector1.children[0]);
 
 // 8. Utilizing **`document.body.children`**, target all child elements of the **`<body>`** element and 
 // print them to the console. (**`document.body.children`**)
 
 // let allChildrens = document.body.children;
 // console.log(allChildrens);
+
+
+// console.log(document.body.children);
 
 
 // 9. Using **`getElementsByTagName`**, target the first **`<li>`** element within the **`<ul>`** with class "list" and 
@@ -66,41 +71,51 @@
 // let className= document.getElementsByClassName("content")[0].innerHTML
 // console.log(className);
 
+// let cn= document.getElementsByClassName("content");
+
+// console.log(cn[0].innerHTML);
+
+
+
 // 11. Using **`getElementsByName`**, target the input element with the name "fullName" and print it to the console.
 // (**`getElementsByName`**)
 
-// let elementName= document.getElementsByName('fullname');
-
+// let elementName= document.getElementsByName('fullName');
 // console.log(elementName);
+
+// console.log(document.getElementsByName("fullName")[0].value);
+
+
 
 // 12. What classes are present in the **`classList`** of the element with the ID "main-heading"? (**`classList`**)
 
 // let classList1= document.getElementById('main-heading').classList;
 // console.log(classList1);
 
+// console.log(document.getElementById("main-heading").classList);
+
 // 13. Add the class "highlight" to the element with the ID "main-heading". What classes are present now? (**`classList.add`**)
 
 // let addClass= document.getElementById('main-heading').classList.add("highlight");
 // console.log(addClass);
 
-// let classList1= document.getElementById('main-heading').classList;
-// console.log(classList1);
-
+// let addclass= document.getElementById('main-heading').classList.add("heighlight");
 
 // 14. Remove the class "highlight" from the element with the ID "main-heading". What classes are present now? (**`classList.remove`**)
 
 // let remove_Class= document.getElementById('main-heading').classList.remove('highlight');
 
-// let classList1= document.getElementById('main-heading').classList;
-// console.log(classList1);
+// let remove_class = document.getElementById("main-heading").classList.remove()
+
+
 
 // 15. Toggle the class "active" on the element with the class "inner-box" inside the element with the ID "container". 
 // What classes are present on the "inner-box" element? (**`classList.toggle`**)
 
-// let togl= document.getElementsByClassName('inner-box')[0]
+// let togl= document.getElementsByClassName('inner-box')[0];
 // let togl1=togl.classList.toggle('active');
 
-// console.log(togl.classList)
+// console.log(togl.classList);
 
 // 16. Does the element with the ID "name" have the class "input-field"? Print **`true`** or **`false`**. 
 // (**`classList.contains`**)
@@ -270,7 +285,7 @@
 // console.log(content1.innerWidth);
 
 // 43. Print the **`outerHeight`** and **`outerWidth`** of the window.
- //(**`outerHeight`** / **`outerWidth`**)
+//(**`outerHeight`** / **`outerWidth`**)
 
 //  let content1= window
 // console.log(content1.outerHeight);
@@ -407,3 +422,19 @@
 // let createPElement= document.createElement('p')
 // let addtext= createPElement.innerText ="New paragraph"
 // let appendPTag= document.getElementsByClassName('inner-box')[0].append(createPElement);
+
+
+let btn = document.querySelector('.save');
+
+// console.log(btn)
+
+btn.addEventListener("click", () => {
+    
+    if(btn.innerHTML === "save") {
+        btn.innerHTML = "hello"
+    }
+    else{
+        btn.innerHTML = "save"
+    }
+    
+});
