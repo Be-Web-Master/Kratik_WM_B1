@@ -9,8 +9,10 @@ function removeDublicates(arr){
     const set = new Set();
     for( let i=0; i<arr.length; i++){
         set.add(arr[i]);
-    }
-    return set;
+    }   
+    
+     const arr2= [...set];
+     return(arr2)
 }
 
 console.log(removeDublicates(arr));
