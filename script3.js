@@ -13,8 +13,6 @@ function getReversedWords(string){
     let str2=  string.split(" ");
 
     let result = [];
-    
-
     for( let i = str2.length-1; i>=0; i--){
 
     result.push(str2[i]);
