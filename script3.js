@@ -4,21 +4,18 @@
 // this function will return true if all elements in odd index are odd numbers.
 
 
-const arr1 = [0,11,2,3,4];
+const arr1 = [0,2,3,3,5];
 
 function checkOddIndexNumber(arr){
-    let result = false;
-    for(let i=0; i < arr.length; i++){
-        if(i%2!==0 && arr[i]%2!==0){
-            
-                result = true;
-        
+    let result = true;
+    for(let i=1; i < arr.length; i++){
+        if(i%2!==0 && arr[i]%2===0){
+                result = false;
         }
-    }
-
+        
+    } 
     return result;
 };
-
 
 console.log(checkOddIndexNumber(arr1));
 
