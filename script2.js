@@ -8,7 +8,7 @@
 
 
 
-const arr = [9,4,6,2,7,12,14,21]
+const arr = [14,9,6,2,4,7,12,21]
 let num1 = 2
 let num2 = 3
 
@@ -18,14 +18,14 @@ function findElemenetsDivisibleBy(arr, num1, num2){
 
     for(let i = 0 ; i<arr.length; i++){
 
-        if( arr[i]%2===0 && arr[i]%3===0){
+        if( arr[i]%num1===0 && arr[i]%num2===0){
             waste.unshift(arr[i])
         }
-        else if( arr[i]%2===0 ){
-            output.unshift(arr[i])
-        }
-        else if( arr[i]%3===0 ){
+        else if( arr[i]%num2===0 ){
             output.push(arr[i])
+        }
+        else if( arr[i]%num1===0 ){
+            output.unshift(arr[i])
         }
     }
 
