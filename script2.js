@@ -20,7 +20,7 @@ function capitalizeFirstChar(arr){
 };
 
 
-console.log(capitalizeFirstChar(arr))
+console.log(capitalizeFirstChar(arr));
 
 
 
