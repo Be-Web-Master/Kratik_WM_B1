@@ -14,24 +14,19 @@ const arr = [5,12,3,4,6,11,2,1]
 
 
 function getMaxSumNeighbourIndex(arr){
+
     let output = 0;
+     for(let i = 0; i<arr.length; i++){
 
-    let arr2 = [];
+        if(arr[i]+arr[i+2])
 
-    for(let i=0; i < arr.length; i++){
 
-        // if(arr[i]+arr[i+2]){
-            arr.push(arr[i]+arr[i+2]) 
-        
 
-    };
-
-    console.log(arr2);
-    // return output;
+     }
 };
 
 
-console.log(getMaxSumNeighbourIndex(arr));
+// console.log(getMaxSumNeighbourIndex(arr));
 
 
 

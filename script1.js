@@ -10,20 +10,21 @@ const arr = [ "abcd", "advc", "babd", "cde" ]
 const substring = "ab"
 
 
-// function getStringsBySubstring(arr, substring){
+function getStringsBySubstring(arr, substring){
 
-//     let output = [];
+    let output = [];
 
-//     for( let i=0; i< arr.length; i++){
+    for(let i=0; i< arr.length; i++){
+        for( let j=0; j<arr[i].length; j++){
 
-//             if( arr[j] && arr[j+1] === substring){
-//              
-//             };
-//         };
-//     };
+            if(arr[i][j] === substring[0] && arr[i][j+1] === substring[1]){
+                output.push(arr[i]);
+            };
+        };
+    };
 
+    return output;
+};
 
-// };
-
-// console.log( getStringsBySubstring(arr, substring));
+console.log( getStringsBySubstring(arr, substring));
 
