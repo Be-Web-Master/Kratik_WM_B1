@@ -3,8 +3,8 @@
 // The overall run time complexity should be O(log (m+n)).
 
 
-let m = [1,2,3,7];
-let n = [2];
+let m = [1,5];
+let n = [2,4];
 
 
 function findMedian(m,n){
