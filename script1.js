@@ -20,21 +20,31 @@ const word ="AFSAF";
 function useageOfCapital(word){
 
     let output= false;
-
+    let capital = false;
     for( let i = 0; i< word.length; i++){
-        if(word[i]=== ((word[i]).toUpperCase())){
-            output = true;
+        if(i === 0){
+            if(word[i] <= 'Z'){
+                capital = true;
+            }
+        }else{
+            if(capital){
+                if(word[1] <= 'Z' && word[i] > 'Z'){
+                    return false;
+                }
+                if(word[1] >= 'a' && word[i] < 'a'){
+                    return false;
+                }
+            }else{
+                if(word[i] < 'a'){
+                    return false;
+                }
+            }
         }
-        if( word[i] === ((word[i]).toLowerCase())){
-            output = true;
-        }
-        if( word[0] === ((word[0]).toUpperCase()) && word[i+1] === word[i+1].toLowerCase()){
-            output = true;
-        }
-        else{
-            output= false
-
-        }
+        
+        // if( word[0] >= 'Z' && word[i+1].toLowerCase()){
+        //     output = true;
+        // }
+       
     }
 
     return output;
@@ -43,3 +53,5 @@ function useageOfCapital(word){
 
 
 console.log(useageOfCapital(word));
+
+// console.log(typeof word[0]);
